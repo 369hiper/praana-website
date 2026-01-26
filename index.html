@@ -21,53 +21,12 @@
     <link rel="canonical" href="https://praanacoil.com/" />
     <link rel="robots" href="/robots.txt" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Outfit', 'sans-serif'],
-              mono: ['Space Grotesk', 'monospace'],
-            },
-            colors: {
-              praana: {
-                dark: '#0f172a',
-                primary: '#6366f1', // Indigo
-                accent: '#14b8a6',  // Teal
-                glow: '#818cf8',
-              }
-            },
-            animation: {
-              'spin-slow': 'spin 12s linear infinite',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            }
-          }
-        }
-      }
-    </script>
+    
     <!-- Three.js and MediaPipe for CosmicVisualization -->
     <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js"></script>
-    <style>
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0f172a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #334155;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #475569;
-      }
-    </style>
 </head>
   <body class="bg-praana-dark text-slate-100 antialiased">
     <div id="root"></div>
