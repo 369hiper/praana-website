@@ -33,8 +33,9 @@ View your app in AI Studio: https://ai.studio/apps/drive/1-TTTUio8QcM-Td6_q8aqrg
 This project uses `BrowserRouter` for clean URLs like:
 - `/shipping-policy`
 - `/privacy-policy`
-- `/product-policy`
+- `/terms-and-conditions`
 - `/warranty-claims`
+- `/contact-us`
 
 Your hosting must be configured to rewrite all routes to `index.html` (SPA fallback).
 

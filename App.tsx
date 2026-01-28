@@ -10,7 +10,8 @@ import WarrantyClaims from './pages/WarrantyClaims';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import EULA from './pages/EULA';
 import ShippingPolicy from './pages/ShippingPolicy';
-import ProductPolicy from './pages/ProductPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
+import ContactUs from './pages/ContactUs';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CheckoutPage from './pages/CheckoutPage';
 import MiniVortexPage from './pages/MiniVortexPage';
@@ -48,7 +49,8 @@ const App: React.FC = () => {
               <Route path={PageRoute.PRO_VORTEX} element={<ProVortexPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path={PageRoute.SHIPPING_POLICY} element={<ShippingPolicy />} />
-              <Route path={PageRoute.PRODUCT_POLICY} element={<ProductPolicy />} />
+              <Route path={PageRoute.TERMS_AND_CONDITIONS} element={<TermsAndConditions />} />
+              <Route path={PageRoute.CONTACT_US} element={<ContactUs />} />
               <Route path={PageRoute.PRIVACY_POLICY} element={<PrivacyPolicy />} />
               <Route path={PageRoute.EULA} element={<EULA />} />
             </Routes>

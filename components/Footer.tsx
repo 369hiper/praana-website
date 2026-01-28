@@ -31,10 +31,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li><Link to={PageRoute.SHIPPING_POLICY} className="hover:text-praana-accent transition-colors">Shipping Policy</Link></li>
               <li><Link to={PageRoute.PAYMENT_REFUND_POLICY} className="hover:text-praana-accent transition-colors">Payment & Refund Policy</Link></li>
-              <li><Link to={PageRoute.PRODUCT_POLICY} className="hover:text-praana-accent transition-colors">Product Policy</Link></li>
+              <li><Link to={PageRoute.TERMS_AND_CONDITIONS} className="hover:text-praana-accent transition-colors">Terms & Conditions</Link></li>
               <li><Link to={PageRoute.WARRANTY_CLAIMS} className="hover:text-praana-accent transition-colors">Warranty Claims</Link></li>
               <li><Link to={PageRoute.PRIVACY_POLICY} className="hover:text-praana-accent transition-colors">Privacy Policy</Link></li>
               <li><Link to={PageRoute.EULA} className="hover:text-praana-accent transition-colors">EULA</Link></li>
+              <li><Link to={PageRoute.CONTACT_US} className="hover:text-praana-accent transition-colors">Contact Us</Link></li>
             </ul>
           </div>
           <div>
