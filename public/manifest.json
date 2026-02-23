@@ -1,0 +1,39 @@
+{
+    "name": "Praana Coil - Advanced PEMF Healing",
+    "short_name": "Praana Coil",
+    "description": "PEMF wellness technology inspired by frequency, resonance, and toroidal coil geometry",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#6366f1",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/praana-coil-hero.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/praana-coil-hero.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "health",
+        "wellness",
+        "medical"
+    ],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "Shop Products",
+            "short_name": "Shop",
+            "description": "Browse PEMF healing products",
+            "url": "/#products",
+            "icons": []
+        }
+    ]
+}
