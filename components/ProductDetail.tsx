@@ -71,7 +71,7 @@ const ProductDetail: React.FC = () => {
       <a href="/#products" className="mb-8 inline-flex items-center text-praana-primary hover:underline">
         <ArrowLeft className="w-4 h-4 mr-1" /> Back to products
       </a>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Product Image Gallery */}
         <div className="space-y-4">
@@ -82,10 +82,10 @@ const ProductDetail: React.FC = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          
+
           {/* Thumbnails could go here */}
         </div>
-        
+
         {/* Product Info */}
         <div className="space-y-8">
           <div>
@@ -93,9 +93,9 @@ const ProductDetail: React.FC = () => {
               {product.category}
             </span>
             <h1 className="text-4xl font-bold text-slate-900 mb-4">{product.name}</h1>
-            <div className="text-4xl font-bold text-praana-primary mb-6">${displayPrice}</div>
+            {/* <div className="text-4xl font-bold text-praana-primary mb-6">${displayPrice}</div> */}
           </div>
-          
+
           {/* Variant Selection */}
           {product.variants && product.variants.length > 0 && (
             <div className="space-y-4">
@@ -108,14 +108,13 @@ const ProductDetail: React.FC = () => {
                   <button
                     key={variant.id}
                     onClick={() => setSelectedVariant(variant.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full border ${
-                      selectedVariant === variant.id
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full border ${selectedVariant === variant.id
                         ? 'border-praana-primary bg-praana-primary/10'
                         : 'border-slate-300 hover:border-praana-primary'
-                    }`}
+                      }`}
                   >
-                    <div 
-                      className="w-5 h-5 rounded-full border border-slate-300" 
+                    <div
+                      className="w-5 h-5 rounded-full border border-slate-300"
                       style={{ backgroundColor: variant.color }}
                     ></div>
                     <span>{variant.name.split(' ').slice(-1)[0]}</span>
@@ -124,86 +123,84 @@ const ProductDetail: React.FC = () => {
               </div>
             </div>
           )}
-          
+
           {/* Quantity Selector */}
           <div className="flex items-center gap-4">
             <div className="flex items-center border border-slate-300 rounded-full">
-              <button 
+              <button
                 onClick={decrementQuantity}
                 className="px-4 py-2 text-xl hover:bg-slate-100 rounded-l-full"
               >
                 -
               </button>
               <span className="px-4 py-2">{quantity}</span>
-              <button 
+              <button
                 onClick={incrementQuantity}
                 className="px-4 py-2 text-xl hover:bg-slate-100 rounded-r-full"
               >
                 +
               </button>
             </div>
-            
+
             <div className="flex items-center text-sm text-slate-500">
               <Package className="w-4 h-4 mr-1" />
               <span>
-                {selectedVariantData 
-                  ? `${selectedVariantData.stockQuantity} in stock` 
+                {selectedVariantData
+                  ? `${selectedVariantData.stockQuantity} in stock`
                   : `${product.stockQuantity} in stock`}
               </span>
             </div>
           </div>
-          
+
           {/* Add to Cart Button */}
-          <button 
+          <button
             onClick={addToCart}
             className="w-full flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition-colors"
           >
             <ShoppingCart className="w-5 h-5" />
-            Add to Cart - {formatPrice(priceValue * quantity, currency)}
+            Add to Cart
+            {/* - {formatPrice(priceValue * quantity, currency)} */}
           </button>
-          
+
           {/* Tabs */}
           <div className="border-b border-slate-200">
             <nav className="-mb-px flex space-x-8">
               <button
                 onClick={() => setActiveTab('description')}
-                className={`py-4 px-1 border-b-2 font-medium text-sm ${
-                  activeTab === 'description'
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'description'
                     ? 'border-praana-primary text-praana-primary'
                     : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
-                }`}
+                  }`}
               >
                 Description
               </button>
               <button
                 onClick={() => setActiveTab('specs')}
-                className={`py-4 px-1 border-b-2 font-medium text-sm ${
-                  activeTab === 'specs'
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'specs'
                     ? 'border-praana-primary text-praana-primary'
                     : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
-                }`}
+                  }`}
               >
                 Specifications
               </button>
               <button
                 onClick={() => setActiveTab('benefits')}
-                className={`py-4 px-1 border-b-2 font-medium text-sm ${
-                  activeTab === 'benefits'
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'benefits'
                     ? 'border-praana-primary text-praana-primary'
                     : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
-                }`}
+                  }`}
               >
                 PEMF Benefits
               </button>
             </nav>
           </div>
-          
+
           {/* Tab Content */}
           <div className="py-4">
             {activeTab === 'description' && (
               <div>
                 <p className="text-slate-600 leading-relaxed mb-6">{product.description}</p>
-                
+
                 <h3 className="text-xl font-bold text-slate-900 mb-4">Key Benefits</h3>
                 <div className="space-y-3">
                   {product.benefits.map((benefit, idx) => (
@@ -215,7 +212,7 @@ const ProductDetail: React.FC = () => {
                 </div>
               </div>
             )}
-            
+
             {activeTab === 'specs' && (
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">Technical Specifications</h3>
@@ -233,7 +230,7 @@ const ProductDetail: React.FC = () => {
                 )}
               </div>
             )}
-            
+
             {activeTab === 'benefits' && (
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">PEMF Therapy Benefits</h3>

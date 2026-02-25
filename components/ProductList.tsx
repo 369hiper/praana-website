@@ -232,7 +232,7 @@ const ProductList: React.FC = () => {
 
                 <div className="flex-1 space-y-6">
                   <h3 className="text-3xl font-bold text-slate-900">{product.name}</h3>
-                  <div className="text-3xl font-bold text-praana-primary">{displayPrice}</div>
+                  {/* <div className="text-3xl font-bold text-praana-primary">{displayPrice}</div> */}
 
                   {product.variants && product.variants.length > 0 && (
                     <div className="space-y-4">

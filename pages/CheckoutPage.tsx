@@ -170,13 +170,13 @@ const CheckoutPage: React.FC = () => {
                         />
                       </div>
                       <div className="flex-grow">
-                        <h3 className="font-medium text-slate-900">{item.name} <span className="text-sm text-slate-500">({item.variant?.name})</span></h3>
+                        <h3 className="font-medium text-slate-900">{item.name}</h3>
                         <p className="text-slate-600">Qty: {item.quantity}</p>
                       </div>
-                      <div className="text-right">
+                      {/* <div className="text-right">
                         <p className="font-medium">${(item.price * item.quantity).toFixed(2)}</p>
                         <p className="text-slate-600 text-sm">${item.price.toFixed(2)} each</p>
-                      </div>
+                      </div> */}
                     </div>
                   ))
                 )}
@@ -358,14 +358,14 @@ const CheckoutPage: React.FC = () => {
         {/* Right Column - Summary */}
         <div className="bg-white rounded-2xl shadow-lg p-6 h-fit sticky top-6">
           <h3 className="text-xl font-bold text-slate-900 mb-4">Order Summary</h3>
-          <div className="space-y-3 mb-6">
+          {/* <div className="space-y-3 mb-6">
             <div className="flex justify-between"><span>Subtotal</span><span>${getTotalPrice().toFixed(2)}</span></div>
             <div className="flex justify-between"><span>Tax</span><span>${getTax().toFixed(2)}</span></div>
             <div className="flex justify-between"><span>Shipping</span><span>${getShipping().toFixed(2)}</span></div>
             <div className="border-t border-slate-200 pt-3 mt-3">
               <div className="flex justify-between font-bold text-lg"><span>Total</span><span>${getTotal().toFixed(2)}</span></div>
             </div>
-          </div>
+          </div> */}
           {step === 'cart' && (
             <button onClick={() => setStep('address')} className="w-full bg-slate-900 text-white py-3 rounded-full font-bold hover:bg-slate-800 transition-colors">Continue to Shipping</button>
           )}

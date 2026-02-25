@@ -32,7 +32,9 @@ const ProVortexPage: React.FC = () => {
         chargingTime: '4 hours',
         weight: '2.5 kg',
         dimensions: '25cm x 25cm x 20cm'
-      }
+      },
+      sku: 'PV-BLACK',
+      stockQuantity: 5
     },
     {
       id: 'pv-silver',
@@ -46,7 +48,9 @@ const ProVortexPage: React.FC = () => {
         chargingTime: '4 hours',
         weight: '2.5 kg',
         dimensions: '25cm x 25cm x 20cm'
-      }
+      },
+      sku: 'PV-SILVER',
+      stockQuantity: 5
     }
   ];
 
@@ -91,7 +95,10 @@ const ProVortexPage: React.FC = () => {
       name: 'Pro Vortex',
       price: currentVariant.price,
       imageUrl: productImages[0],
-      stockQuantity: 5
+      stockQuantity: 5,
+      diameter: '25cm',
+      description: '',
+      benefits: []
     };
 
     dispatch({
@@ -152,7 +159,7 @@ const ProVortexPage: React.FC = () => {
                 Professional
               </span>
               <h1 className="text-4xl font-bold text-slate-100 mb-4">Pro Vortex (25cm)</h1>
-              <div className="text-4xl font-bold text-praana-primary mb-6">${currentVariant.price}</div>
+              {/* <div className="text-4xl font-bold text-praana-primary mb-6">${currentVariant.price}</div> */}
             </div>
 
             {/* Variant Selection */}
@@ -219,7 +226,8 @@ const ProVortexPage: React.FC = () => {
                 onClick={addToCart}
                 className="w-full bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition-colors"
               >
-                Add to Cart - ${(currentVariant.price * quantity).toFixed(2)}
+                Add to Cart
+                {/* - ${(currentVariant.price * quantity).toFixed(2)} */}
               </button>
             </div>
           </div>

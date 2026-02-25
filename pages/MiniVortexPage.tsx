@@ -68,7 +68,9 @@ const MiniVortexPage: React.FC = () => {
         chargingTime: '2 hours',
         weight: '0.5 kg',
         dimensions: '5cm x 5cm x 10cm'
-      }
+      },
+      sku: 'MV-AMETHYST',
+      stockQuantity: 20
     },
     {
       id: 'mv-quartz',
@@ -82,7 +84,9 @@ const MiniVortexPage: React.FC = () => {
         chargingTime: '2 hours',
         weight: '0.5 kg',
         dimensions: '5cm x 5cm x 10cm'
-      }
+      },
+      sku: 'MV-QUARTZ',
+      stockQuantity: 20
     },
     {
       id: 'mv-ocean-blue',
@@ -96,7 +100,9 @@ const MiniVortexPage: React.FC = () => {
         chargingTime: '2 hours',
         weight: '0.5 kg',
         dimensions: '5cm x 5cm x 10cm'
-      }
+      },
+      sku: 'MV-OCEAN-BLUE',
+      stockQuantity: 20
     },
     {
       id: 'mv-4-crystal-colors',
@@ -110,7 +116,9 @@ const MiniVortexPage: React.FC = () => {
         chargingTime: '2 hours',
         weight: '0.5 kg',
         dimensions: '5cm x 5cm x 10cm'
-      }
+      },
+      sku: 'MV-4-CRYSTAL',
+      stockQuantity: 20
     },
     // {
     //   id: 'mv-7-prism-colors',
@@ -124,7 +132,9 @@ const MiniVortexPage: React.FC = () => {
     //     chargingTime: '2 hours',
     //     weight: '0.5 kg',
     //     dimensions: '5cm x 5cm x 10cm'
-    //   }
+    //   },
+    //   sku: 'MV-7-PRISM',
+    //   stockQuantity: 20
     // },
   ];
 
@@ -170,7 +180,10 @@ const MiniVortexPage: React.FC = () => {
       name: 'Mini Vortex',
       price: currentVariant.price,
       imageUrl: activeCrystal.image,
-      stockQuantity: 20
+      stockQuantity: 20,
+      diameter: '5cm',
+      description: '',
+      benefits: []
     };
 
     dispatch({
@@ -232,7 +245,7 @@ const MiniVortexPage: React.FC = () => {
                 Portable
               </span>
               <h1 className="text-4xl font-bold text-slate-100 mb-4">Mini Vortex (5cm)</h1>
-              <div className="text-4xl font-bold text-praana-primary mb-6">${currentVariant.price}</div>
+              {/* <div className="text-4xl font-bold text-praana-primary mb-6">${currentVariant.price}</div> */}
             </div>
 
             {/* Variant Selection */}
@@ -302,7 +315,8 @@ const MiniVortexPage: React.FC = () => {
                 className="w-full bg-indigo-600 text-white px-8 py-4 rounded-full font-bold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
               >
                 <ShoppingCart className="w-5 h-5" />
-                Add to Cart - ${(currentVariant.price * quantity).toFixed(2)}
+                Add to Cart
+                {/* - ${(currentVariant.price * quantity).toFixed(2)} */}
               </button>
 
               <div className="text-sm text-slate-400 italic">

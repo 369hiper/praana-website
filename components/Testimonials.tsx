@@ -17,22 +17,25 @@ const Testimonials: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {TESTIMONIALS.map((t) => (
-            <div key={t.id} className="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-              <img src={t.image} alt={t.name} className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                   <Play className="w-6 h-6 fill-white text-white" />
+            <div key={t.id} className="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer bg-slate-50 border border-slate-100 p-8 hover:border-praana-primary/50 transition-colors">
+              <div className="flex flex-col h-full justify-between">
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-praana-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-praana-primary/20 transition-colors">
+                    <Play className="w-5 h-5 fill-praana-primary text-praana-primary" />
+                  </div>
+                  <p className="text-slate-700 text-lg italic leading-relaxed">"{t.quote}"</p>
                 </div>
-                <p className="text-white text-sm mb-3 italic">"{t.quote}"</p>
-                <div className="flex items-center gap-2">
-                  <span className="font-bold text-white">{t.name}</span>
-                  <span className="text-xs text-praana-accent bg-praana-dark/50 px-2 py-0.5 rounded">{t.role}</span>
+                <div className="flex items-center gap-3">
+                  <div className="flex flex-col">
+                    <span className="font-bold text-slate-900">{t.name}</span>
+                    <span className="text-xs text-praana-primary font-medium">{t.role}</span>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className="mt-12 text-center">
           <button className="bg-praana-primary hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-colors">
             View All Stories

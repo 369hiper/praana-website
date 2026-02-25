@@ -54,7 +54,9 @@ const CoreVortexPage: React.FC = () => {
         chargingTime: '3 hours',
         weight: '1.2 kg',
         dimensions: '15cm x 15cm x 15cm'
-      }
+      },
+      sku: 'CV-TQS',
+      stockQuantity: 12
     },
     {
       id: 'cv-amethyst-lapis',
@@ -68,7 +70,9 @@ const CoreVortexPage: React.FC = () => {
         chargingTime: '3 hours',
         weight: '1.2 kg',
         dimensions: '15cm x 15cm x 15cm'
-      }
+      },
+      sku: 'CV-AL',
+      stockQuantity: 12
     },
     {
       id: 'cv-green-aventurine',
@@ -82,7 +86,9 @@ const CoreVortexPage: React.FC = () => {
         chargingTime: '3 hours',
         weight: '1.2 kg',
         dimensions: '15cm x 15cm x 15cm'
-      }
+      },
+      sku: 'CV-GA',
+      stockQuantity: 12
     },
   ];
 
@@ -147,7 +153,10 @@ const CoreVortexPage: React.FC = () => {
       name: 'Core Vortex',
       price: currentVariant.price,
       imageUrl: activeImages[0],
-      stockQuantity: 12
+      stockQuantity: 12,
+      diameter: '15cm',
+      description: '',
+      benefits: []
     };
 
     dispatch({
@@ -208,7 +217,7 @@ const CoreVortexPage: React.FC = () => {
                 Therapeutic
               </span>
               <h1 className="text-4xl font-bold text-slate-100 mb-4">Core Vortex (15cm)</h1>
-              <div className="text-4xl font-bold text-praana-primary mb-6">${currentVariant.price}</div>
+              {/* <div className="text-4xl font-bold text-praana-primary mb-6">${currentVariant.price}</div> */}
             </div>
 
             {/* Variant Selection */}
@@ -220,8 +229,8 @@ const CoreVortexPage: React.FC = () => {
                     key={c.id}
                     onClick={() => setSelectedVariant(c.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-full border ${selectedVariant === c.id
-                        ? 'border-praana-primary bg-praana-primary/10'
-                        : 'border-slate-600 hover:border-praana-primary'
+                      ? 'border-praana-primary bg-praana-primary/10'
+                      : 'border-slate-600 hover:border-praana-primary'
                       }`}
                   >
                     <div
@@ -278,7 +287,8 @@ const CoreVortexPage: React.FC = () => {
                 onClick={addToCart}
                 className="w-full bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition-colors"
               >
-                Add to Cart - ${(currentVariant.price * quantity).toFixed(2)}
+                Add to Cart
+                {/* - ${(currentVariant.price * quantity).toFixed(2)} */}
               </button>
             </div>
           </div>
